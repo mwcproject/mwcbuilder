@@ -1,5 +1,16 @@
 #!/bin/sh
 
+QMAKE=~/Qt/5.9/gcc_64/bin/qmake
+
+if [ -z "$1" ]
+then
+echo "not set, using $QMAKE";
+else
+QMAKE=$1;
+fi
+echo "qmake=$QMAKE"
+
+
 # Clean everything. This is a release build so we can wait
 rm -rf mwc713 mwc-qt-wallet target/*
 mkdir -p target

@@ -17,6 +17,6 @@ steps:
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     ./setup_ubuntu.sh
-    ./build-qt-wallet-linux.sh
+    ./build-qt-wallet-linux.sh qmake
   displayName: 'Run a multi-line script'
 
