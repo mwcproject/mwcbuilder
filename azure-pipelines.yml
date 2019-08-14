@@ -11,5 +11,5 @@ pool:
 
 steps:
 - script: |
-  bash setup_ubuntu.sh
+  echo "ok"
   displayName: 'Setup Ubuntu'
