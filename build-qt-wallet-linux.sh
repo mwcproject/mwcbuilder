@@ -9,7 +9,7 @@ else
 QMAKE=$1;
 fi
 echo "qmake=$QMAKE"
-
+$QMAKE --version
 
 # Clean everything. This is a release build so we can wait
 rm -rf mwc713 mwc-qt-wallet target/*
@@ -18,7 +18,7 @@ mkdir -p target
 # First build mwc713 statically
 git clone https://github.com/mwcproject/mwc713
 cd mwc713
-./build_static.sh 
+#./build_static.sh 
 cd ..
 
 
