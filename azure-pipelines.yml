@@ -16,6 +16,6 @@ steps:
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     ./setup_ubuntu.sh
-    echo See https://aka.ms/yaml
+    ./build-qt-wallet-linux.sh
   displayName: 'Run a multi-line script'
 
