@@ -29,6 +29,7 @@ cd target
 mkdir -p mwc-qt-wallet-1.0-5/DEBIAN
 cp ../resources/control mwc-qt-wallet-1.0-5/DEBIAN
 cp ../resources/mwc-qt-wallet.sh mwc-qt-wallet-1.0-5/usr/local/bin/mwc-qt-wallet
+cp ../resources/mwc-qt-wallet_lr.sh mwc-qt-wallet-1.0-5/usr/local/bin/mwc-qt-wallet_lr
 cp -rp ../resources/share mwc-qt-wallet-1.0-5/usr
 
 echo "Building debain package at target/mwc-qt-wallet-1.0-5.deb"
