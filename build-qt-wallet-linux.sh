@@ -1,16 +1,5 @@
 #!/bin/sh
 
-QMAKE=~/Qt/5.9/gcc_64/bin/qmake
-
-if [ -z "$1" ]
-then
-echo "not set, using $QMAKE";
-else
-QMAKE=$1;
-fi
-echo "qmake=$QMAKE"
-$QMAKE --version
-
 # Clean everything. This is a release build so we can wait
 rm -rf mwc713 mwc-qt-wallet target/*
 mkdir -p target
@@ -26,7 +15,7 @@ cd ..
 git clone https://github.com/mwcproject/mwc-qt-wallet
 cd mwc-qt-wallet
 git apply -p1 ../linux.patch
-$QMAKE mwc-qt-wallet.pro QMAKE_CXXFLAGS="-fno-sized-deallocation -pipe" -config release -spec linux-g++ CONFIG+=x86_64
+../Qt/5.9/gcc_64/bin/qmake mwc-qt-wallet.pro QMAKE_CXXFLAGS="-fno-sized-deallocation -pipe" -config release -spec linux-g++ CONFIG+=x86_64
 make
 
 cd ../
