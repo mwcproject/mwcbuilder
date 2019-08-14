@@ -10,4 +10,7 @@ curl https://sh.rustup.rs -sSf | bash -s -- -y
 
 sudo ln -s /home/ubuntu/.cargo/bin/cargo /usr/bin/cargo
 
+
+cat QT-segment* > ./QT.min.tar.bz2
 bzip2 -dc QT.min.tar.bz2 | tar xvf -
+rm -rf QT.min.tar.bz2
