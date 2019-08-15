@@ -7,7 +7,14 @@ mkdir -p target
 # First build mwc713 statically
 git clone https://github.com/mwcproject/mwc713
 cd mwc713
-./build_static.sh 
+./build_static.sh
+
+FILE=target/release/mwc713
+if [ ! -f "$FILE" ]; then
+    echo "ERROR: $FILE does not exist";
+    exit 1;
+fi
+
 cd ..
 
 
@@ -16,7 +23,20 @@ git clone https://github.com/mwcproject/mwc-qt-wallet
 cd mwc-qt-wallet
 git apply -p1 ../linux.patch
 ../Qt/5.9/gcc_64/bin/qmake mwc-qt-wallet.pro QMAKE_CXXFLAGS="-fno-sized-deallocation -pipe" -config release -spec linux-g++ CONFIG+=x86_64
+
+FILE=Makefile
+if [ ! -f "$FILE" ]; then
+    echo "ERROR: $FILE does not exist";
+    exit 1;
+fi
+
 make
+
+FILE=mwc-qt-wallet
+if [ ! -f "$FILE" ]; then
+    echo "ERROR: $FILE does not exist";
+    exit 1;
+fi
 
 cd ../
 mkdir -p target/mwc-qt-wallet-1.0-5/usr/local/bin/
