@@ -17,3 +17,10 @@ steps:
     ./build-qt-wallet-linux.sh qmake
   displayName: 'Setup, Build, and Confirm'
 
+schedules:
+- cron: "0 0 * * *"
+  displayName: Daily midnight build
+  branches:
+    include:
+    - master
+  always: true
