@@ -11,12 +11,9 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     ./setup_ubuntu.sh
     ./build-qt-wallet-linux.sh qmake
-  displayName: 'Run a multi-line script'
+  displayName: 'Setup, Build, and Confirm'
 
