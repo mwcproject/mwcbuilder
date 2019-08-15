@@ -9,7 +9,7 @@ git clone https://github.com/mwcproject/mwc713
 cd mwc713
 ./build_static.sh
 
-FILE=target/release/mwc713x
+FILE=target/release/mwc713
 if [ ! -f "$FILE" ]; then
     echo "ERROR: $FILE does not exist";
     exit 1;
