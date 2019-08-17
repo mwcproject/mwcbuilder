@@ -4,7 +4,7 @@
 !define VER_MINOR  0
 !define VER_PATCH  5
 !define VER_PRE    "-INTERNAL"
-!define VER_DISP   "${VER_MAJOR}.${VER_MINOR}.${VER_PATCH}${VER_PRE}"
+!define VER_DISP   "${VER_MAJOR}.${VER_MINOR}.${VER_PATCH}"
 
 
 Name "${APP_NAME} ${VER_DISP}"
