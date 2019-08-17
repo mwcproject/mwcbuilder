@@ -5,12 +5,16 @@ del /s /q mwc713
 rmdir /s /q mwc713
 del /s /q mwc-qt-wallet
 rmdir /s /q mwc-qt-wallet
+del /s /q libs
+rmdir /s /q libs
+
+bzip2 -dc libs.tar.bz2 | tar xvf -
+set LIBCLANG_PATH=%cd%\bin
 
 mkdir target
 
 git clone https://github.com/mwcproject/mwc713
 cd mwc713
-set LIBCLANG_PATH=C:%homepath%\mwcbuilder\bin
 cargo build --release
 cd ..
 
