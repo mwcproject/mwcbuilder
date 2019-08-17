@@ -7,15 +7,24 @@
 trigger:
 - master
 
-pool:
-  vmImage: 'ubuntu-latest'
-
-steps:
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    ./setup_ubuntu.sh
-    ./build-qt-wallet-linux.sh qmake
-  displayName: 'Setup, Build, and Confirm'
+jobs:
+- job: linux
+  pool:
+    vmImage: 'ubuntu-latest'
+  steps:
+    - script: |
+      echo Building project
+      ./setup_ubuntu.sh
+      ./build-qt-wallet-linux.sh qmake
+    displayName: 'Setup, Build, and Confirm'
+- job: windows
+  pool:
+    vmImage: windows-lastest
+  steps:
+    -script: |
+      echo Buildiing project
+      build-qt-wallet-windows.bat
+    displayName: 'Setup, Build, and Confirm'
 
 schedules:
 - cron: "0 0 * * *"
