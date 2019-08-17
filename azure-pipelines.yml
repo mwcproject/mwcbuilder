@@ -14,13 +14,11 @@ jobs:
   steps:
     - script: './setup_ubuntu.sh'
     - script: './build-qt-wallet-linux.sh qmake'
-    displayName: 'Setup, Build, and Confirm'
 - job: windows
   pool:
     vmImage: windows-lastest
   steps:
     -script: 'build-qt-wallet-windows.bat'
-    displayName: 'Setup, Build, and Confirm'
 
 schedules:
 - cron: "0 0 * * *"
