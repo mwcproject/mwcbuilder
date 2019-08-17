@@ -7,35 +7,11 @@ jobs:
 - job: linux
   pool:
     vmImage: ubuntu-latest
-  strategy:
-    matrix:
-      servers:
-        CI_JOB: test
-        CI_JOB_ARGS: servers
-      chain/core/keychain:
-        CI_JOB: test
-        CI_JOB_ARGS: chain core keychain
-      pool/p2p/src:
-        CI_JOB: test
-        CI_JOB_ARGS: pool p2p src
-      api/util/store:
-        CI_JOB: test
-        CI_JOB_ARGS: api util store
-      release:
-        CI_JOB: release
-        PLATFORM: linux-amd64
   steps:
     - script: 'setup_ubuntu.sh'
     - script: 'build-qt-wallet-linux.sh'
 - job: windows
   pool:
     vmImage: windows-latest
-  strategy:
-    matrix:
-      test:
-        CI_JOB: test-all
-      release:
-        CI_JOB: release
-        PLATFORM: win-x64
   steps:
     - script: 'build-qt-wallet-windows.bat'
