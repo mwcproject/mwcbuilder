@@ -16,7 +16,7 @@ jobs:
     - script: './build-qt-wallet-linux.sh qmake'
 - job: windows
   pool:
-    vmImage: windows-lastest
+    vmImage: 'windows-lastest'
   steps:
     -script: 'build-qt-wallet-windows.bat'
 
