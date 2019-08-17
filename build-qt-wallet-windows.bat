@@ -16,7 +16,7 @@ cd ..
 
 git clone https://github.com/mwcproject/mwc-qt-wallet
 cd mwc-qt-wallet
-qmake -spec mingw73_64 mwc-qt-wallet.pro
+qmake -spec win32-g++ mwc-qt-wallet.pro
 make
 cd ..
 
