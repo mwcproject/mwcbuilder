@@ -1,1 +1,1 @@
-bzip2 -dc clanglib.tar.bz2 | tar xvf -
+bzip2 -dc libs.tar.bz2 | tar xvf -

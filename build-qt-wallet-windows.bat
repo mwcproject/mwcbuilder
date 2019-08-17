@@ -10,7 +10,7 @@ mkdir target
 
 git clone https://github.com/mwcproject/mwc713
 cd mwc713
-set LIBCLANG_PATH=../lib
+set LIBCLANG_PATH=C:%homepath%\mwcbuilder\bin
 cargo build --release
 cd ..
 
