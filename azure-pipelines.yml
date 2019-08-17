@@ -13,7 +13,6 @@ jobs:
     vmImage: 'ubuntu-latest'
   steps:
     - script: |
-      echo Building project
       ./setup_ubuntu.sh
       ./build-qt-wallet-linux.sh qmake
     displayName: 'Setup, Build, and Confirm'
@@ -22,7 +21,6 @@ jobs:
     vmImage: windows-lastest
   steps:
     -script: |
-      echo Buildiing project
       build-qt-wallet-windows.bat
     displayName: 'Setup, Build, and Confirm'
 
