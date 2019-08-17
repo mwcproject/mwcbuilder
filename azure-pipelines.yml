@@ -5,12 +5,12 @@ strategy:
   matrix:
     linux:
       imageName: 'ubuntu-latest'
-      setupName: 'setup-ubuntu.sh'
-      scriptName: 'build-qt-wallet-linux.sh'
+      setupName: setup-ubuntu.sh
+      scriptName: build-qt-wallet-linux.sh
     windows:
       imageName: 'windows-latest'
-      setupName: 'setup-windows.bat'
-      scriptName: 'build-qt-wallet-windows.bat'
+      setupName: setup-windows.bat
+      scriptName: build-qt-wallet-windows.bat
 
 pool:
   vmImage: $(imageName)
