@@ -8,8 +8,8 @@ jobs:
   pool:
     vmImage: ubuntu-latest
   steps:
-    - script: 'setup_ubuntu.sh'
-    - script: 'build-qt-wallet-linux.sh'
+    - script: './setup_ubuntu.sh'
+    - script: './build-qt-wallet-linux.sh'
 - job: windows
   pool:
     vmImage: windows-latest
