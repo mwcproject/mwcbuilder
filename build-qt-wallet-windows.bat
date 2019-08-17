@@ -9,7 +9,7 @@ del /s /q libs
 rmdir /s /q libs
 
 bzip2 -dc libs.tar.bz2 | tar xvf -
-set LIBCLANG_PATH=%cd%\bin
+set LIBCLANG_PATH=%cd%\lib
 
 mkdir target
 
