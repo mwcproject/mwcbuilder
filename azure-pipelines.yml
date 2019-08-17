@@ -15,5 +15,6 @@ jobs:
   pool:
     vmImage: vs2017-win2016
   steps:
+    - script: 'setup_windows.bat'
     - script: 'build-qt-wallet-windows.bat'
   displayName: 'Setup, Build, and Confirm - Windows64'
