@@ -20,10 +20,12 @@ qmake -spec win32-g++ mwc-qt-wallet.pro
 make
 cd ..
 
-xcopy nsis target/
+mkdir target\nsis
+xcopy nsis target\nsis /e /s /t
+xcopy nsis target\nsis
 
-xcopy mwc713/target/release/mwc713.exe target/nsis/payload
-xcopy mwc-qt-wallet/release/mwc-qt-wallet.exe target/nsis/payload
+xcopy mwc713\target\release\mwc713.exe target\nsis\payload
+xcopy mwc-qt-wallet\release\mwc-qt-wallet.exe target\nsis\payload
 
 cd target/nsis
 makensis x64.nsi
