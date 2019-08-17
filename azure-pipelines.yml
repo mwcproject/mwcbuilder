@@ -2,6 +2,13 @@ trigger:
   branches:
     include:
       - master
+  schedules:
+- cron: "0 0 * * *"
+  displayName: Daily midnight build
+  branches:
+    include:
+    - master
+  always: true
 
 jobs:
 - job: linux
@@ -13,15 +20,7 @@ jobs:
   displayName: 'Setup, Build, and Confirm - Linux64'
 - job: windows
   pool:
-    vmImage: windows-latest
+    vmImage: vs2017-win2016
   steps:
     - script: 'build-qt-wallet-windows.bat'
   displayName: 'Setup, Build, and Confirm - Windows64'
-  
-  schedules:
-- cron: "0 0 * * *"
-  displayName: Daily midnight build
-  branches:
-    include:
-    - master
-  always: true
