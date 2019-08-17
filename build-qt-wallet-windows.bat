@@ -23,6 +23,8 @@ cd ..
 mkdir target\nsis
 xcopy nsis target\nsis /e /s /t
 xcopy nsis target\nsis
+xcopy nsis\resources target\nsis\resources
+xcopy nsis\include target\nsis\include
 
 xcopy mwc713\target\release\mwc713.exe target\nsis\payload
 xcopy mwc-qt-wallet\release\mwc-qt-wallet.exe target\nsis\payload
