@@ -10,8 +10,18 @@ jobs:
   steps:
     - script: './setup_ubuntu.sh'
     - script: './build-qt-wallet-linux.sh'
+  displayName: 'Setup, Build, and Confirm - Linux64'
 - job: windows
   pool:
     vmImage: windows-latest
   steps:
     - script: 'build-qt-wallet-windows.bat'
+  displayName: 'Setup, Build, and Confirm - Windows64'
+  
+  schedules:
+- cron: "0 0 * * *"
+  displayName: Daily midnight build
+  branches:
+    include:
+    - master
+  always: true
