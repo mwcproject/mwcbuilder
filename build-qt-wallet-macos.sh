@@ -15,19 +15,18 @@ cd ..
 
 # Second build mwc-qt-wallet
 git clone https://github.com/mwcproject/mwc-qt-wallet
-cp fix_macos_makefile.sh mwc-qt-wallet
 cd mwc-qt-wallet
 qmake mwc-qt-wallet.pro -spec macx-clang CONFIG+=x86_64
-./fix_macos_makefile.sh
 make
 
 # Finally prep dmg
 cp ../mwc713/target/release/mwc713 mwc-qt-wallet.app/Contents/MacOS/mwc713
 macdeployqt mwc-qt-wallet.app -appstore-compliant
 
-if [ -z "$1" ] then
+if [ -z "$1" ]
+then
    # We can't sign so just build dmg
-   hdiutil create ../target/mwc-qt-wallet.dmg -fs HFS+ -srcfolder mwc-qt-wallet.app -format UDZO -volname mwc-qt-wallet
+   hdiutil create ../target/mwc-qt-wallet.dmg -fs HFS+ -srcfolder mwc-qt-wallet.app -format UDZO -volname mwc-qt-wallet;
    echo "Complete!";
 else
    # Sign
