@@ -9,7 +9,7 @@ sudo apt install clang-6.0 git curl make build-essential libgl1-mesa-dev openssl
 
 curl https://sh.rustup.rs -sSf | bash -s -- -y
 
-sudo ln -s /home/ubuntu/.cargo/bin/cargo /usr/bin/cargo
+sudo ln -s ~/.cargo/bin/cargo /usr/bin/cargo
 
 
 cat QT-segment* > ./QT.min.tar.bz2
