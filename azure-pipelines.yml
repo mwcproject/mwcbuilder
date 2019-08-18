@@ -18,5 +18,5 @@ jobs:
   steps:
     - script: 'setup_windows.bat'
     - script: 'build-qt-wallet-windows.bat'
-    - script: 'deploy_windows.bath'
+    - script: 'deploy_windows.bat'
   displayName: 'Setup, Build, and Confirm - Windows64'
