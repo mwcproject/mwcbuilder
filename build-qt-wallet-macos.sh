@@ -1,5 +1,7 @@
 #!/bin/sh
 
+. ~/.cargo/env
+
 # Clean everything. This is a release build so we can wait
 rm -rf mwc713 mwc-qt-wallet target/*
 mkdir -p target
