@@ -20,6 +20,13 @@ jobs:
     - script: './build-qt-wallet-linux.sh'
     - script: './deploy_linux.sh'
   displayName: 'Setup, Build, and Confirm - Linux64'
+- job: macos
+  pool:
+    vmImage: macos-10.14
+  steps:
+    - script: './setup_macos.sh'
+    - script: './build-qt-wallet-macos.sh'
+    - script: './deploy_macos.sh'
 - job: windows
   pool:
     vmImage: vs2017-win2016
