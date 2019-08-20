@@ -22,6 +22,10 @@ cargo +stable-i686-pc-windows-msvc build --release
 cd ..
 
 
+set PATH=%cd%\Qt\Tools\mingw730_32\bin;%PATH%
+which g++
+echo %PATH%
+
 git clone https://github.com/mwcproject/mwc-qt-wallet
 cd mwc-qt-wallet
 ..\Qt\5.13.0\mingw73_32\bin\qmake -spec win32-g++ mwc-qt-wallet.pro QMAKE_LFLAGS+=-static
