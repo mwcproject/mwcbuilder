@@ -23,7 +23,8 @@ make
 cp ../mwc713/target/release/mwc713 mwc-qt-wallet.app/Contents/MacOS/mwc713
 ~/Qt/5.9/clang_64/bin/macdeployqt mwc-qt-wallet.app -appstore-compliant
 
-if [ -z "$1" ] then
+if [ -z "$1" ]
+then
    # We can't sign so just build dmg
    hdiutil create ../target/mwc-qt-wallet.dmg -fs HFS+ -srcfolder mwc-qt-wallet.app -format UDZO -volname mwc-qt-wallet
    echo "Complete!";
