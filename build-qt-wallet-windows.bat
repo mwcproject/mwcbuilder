@@ -21,7 +21,7 @@ cd ..
 
 git clone https://github.com/mwcproject/mwc-qt-wallet
 cd mwc-qt-wallet
-..\Qt\5.13.0\mingw73_64\bin\qmake -spec win32-g++ mwc-qt-wallet.pro
+..\Qt\5.13.0\mingw73_64\bin\qmake -spec win32-g++ mwc-qt-wallet.pro QMAKE_LFLAGS += -static
 make
 cd ..
 
