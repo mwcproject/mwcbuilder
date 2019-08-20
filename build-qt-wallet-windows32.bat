@@ -25,6 +25,7 @@ set PATH=%PATH%;%cd%\Qt\Tools\mingw730_32\bin
 git clone https://github.com/mwcproject/mwc-qt-wallet
 cd mwc-qt-wallet
 ..\Qt\5.13.0\mingw73_32\bin\qmake -spec win32-g++ mwc-qt-wallet.pro QMAKE_LFLAGS+=-static
+cat Makefile.Release
 make
 cd ..
 
