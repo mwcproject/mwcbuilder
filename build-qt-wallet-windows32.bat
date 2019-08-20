@@ -15,12 +15,6 @@ set OPENSSL_STATIC="yes"
 
 mkdir target
 
-git clone https://github.com/mwcproject/mwc713
-;cd mwc713
-;cargo +stable-i686-pc-windows-msvc build --release
-cd ..
-
-
 git clone https://github.com/mwcproject/mwc-qt-wallet
 cp fix_win32_makefile.bat mwc-qt-wallet
 cd mwc-qt-wallet
