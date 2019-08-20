@@ -1,4 +1,3 @@
-
 del /s /q target
 rmdir /s /q target
 del /s /q mwc713
@@ -21,11 +20,10 @@ cd mwc713
 cargo +stable-i686-pc-windows-msvc build --release
 cd ..
 
-set PATH=%PATH%;%cd%\Qt\Tools\mingw730_32\bin
+set PATH=%cd%\Qt\Tools\mingw730_32\bin;%PATH%
 git clone https://github.com/mwcproject/mwc-qt-wallet
 cd mwc-qt-wallet
 ..\Qt\5.13.0\mingw73_32\bin\qmake -spec win32-g++ mwc-qt-wallet.pro QMAKE_LFLAGS+=-static
-cat Makefile.Release
 make
 cd ..
 
