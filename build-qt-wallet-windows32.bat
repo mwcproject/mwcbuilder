@@ -22,11 +22,11 @@ cd ..
 
 
 git clone https://github.com/mwcproject/mwc-qt-wallet
+cp fix_win32_makefile.bat mwc-qt-wallet
 cd mwc-qt-wallet
 ..\Qt\5.13.0\mingw73_32\bin\qmake -spec win32-g++ mwc-qt-wallet.pro QMAKE_LFLAGS+=-static
 fix_win32_makefile.bat
 pwd
-cat Makefile.Release
 make
 cd ..
 
