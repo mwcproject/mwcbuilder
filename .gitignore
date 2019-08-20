@@ -1,5 +1,6 @@
 mwc-qt-wallet
 mwc713
 target
-Qt
+/Qt
 Qt5.tar.bz
+/lib

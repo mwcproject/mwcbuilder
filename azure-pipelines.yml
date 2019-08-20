@@ -36,3 +36,11 @@ jobs:
     - script: 'build-qt-wallet-windows.bat'
     - script: 'deploy_windows.bat'
   displayName: 'Windows64'
+- job: windows32
+  pool:
+    vmImage: vs2017-win2016
+  steps:
+    - script: 'setup_windows32.bat'
+    - script: 'build-qt-wallet-windows32.bat'
+    - script: 'deploy_windows32.bat'
+  displayName: 'Windows32'
