@@ -5,8 +5,8 @@ del /s /q mwc713
 rmdir /s /q mwc713
 del /s /q mwc-qt-wallet
 rmdir /s /q mwc-qt-wallet
-del /s /q libs
-rmdir /s /q libs
+del /s /q lib
+rmdir /s /q lib
 
 bzip2 -dc libs.tar.bz2 | tar xvf -
 set LIBCLANG_PATH=%cd%\lib
