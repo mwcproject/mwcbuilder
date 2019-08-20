@@ -15,7 +15,7 @@ cd ..
 git clone https://github.com/mwcproject/mwc-qt-wallet
 cp fix_macos_makefile.sh mwc-qt-wallet
 cd mwc-qt-wallet
-~/Qt/5.9/ios/bin/qmake mwc-qt-wallet.pro -spec macx-clang CONFIG+=x86_64
+~/Qt/5.9/clang_64/bin/qmake mwc-qt-wallet.pro -spec macx-clang CONFIG+=x86_64
 ./fix_macos_makefile.sh
 make
 
