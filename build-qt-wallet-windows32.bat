@@ -7,6 +7,7 @@ rmdir /s /q mwc-qt-wallet
 del /s /q lib
 rmdir /s /q lib
 
+
 bzip2 -dc libs32.tar.bz2 | tar xvf -
 set LIBCLANG_PATH=%cd%\lib
 set OPENSSL_LIB_DIR=%cd%\lib\openssl@1.1/lib/
