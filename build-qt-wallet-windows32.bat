@@ -15,18 +15,12 @@ set OPENSSL_STATIC="yes"
 
 mkdir target
 
+set PATH=%cd%\Qt\Tools\mingw730_32\bin;%cd%\Qt\5.13.0\mingw73_32\bin;%PATH%
+
 git clone https://github.com/mwcproject/mwc-qt-wallet
 cd mwc-qt-wallet
 ..\Qt\5.13.0\mingw73_32\bin\qmake -spec win32-g++ mwc-qt-wallet.pro QMAKE_LFLAGS+=-static
-
-sed -e 's/^LINKER .*/LINKER = D:\/a\/1\/s\/Qt\/Tools\/mingw730_32\/bin\/g++/' Makefile.Release > Makefile.Release.1
-
-perl -pi -e 's/\r\n/\n/g' Makefile.Release.1
-
-mv Makefile.Release.1 Makefile
-
 make
-
 cd ..
 
 mkdir target\nsis
