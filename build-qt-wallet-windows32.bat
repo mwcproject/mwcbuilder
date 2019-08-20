@@ -16,6 +16,11 @@ set OPENSSL_STATIC="yes"
 
 mkdir target
 
+git clone https://github.com/mwcproject/mwc713
+cd mwc713
+cargo +stable-i686-pc-windows-msvc build --release
+cd ..
+
 set PATH=%cd%\Qt\Tools\mingw730_32\bin;%cd%\Qt\5.13.0\mingw73_32\bin;%PATH%
 
 git clone https://github.com/mwcproject/mwc-qt-wallet
