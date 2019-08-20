@@ -16,8 +16,8 @@ set OPENSSL_STATIC="yes"
 mkdir target
 
 git clone https://github.com/mwcproject/mwc713
-cd mwc713
-cargo +stable-i686-pc-windows-msvc build --release
+;cd mwc713
+;cargo +stable-i686-pc-windows-msvc build --release
 cd ..
 
 
