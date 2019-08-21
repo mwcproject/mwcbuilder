@@ -44,3 +44,5 @@ There is a script called setup_ubuntu.sh which will make sure all pre-reqs are i
 ```# ./build-qt-wallet-linux.sh```
 
 The resultant .deb file will be built into the ./target directory.
+
+
