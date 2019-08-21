@@ -53,5 +53,13 @@ cp -rp ../resources/share mwc-qt-wallet-1.0-5/usr
 
 echo "Building debain package at target/mwc-qt-wallet-1.0-5.deb"
 dpkg-deb --build mwc-qt-wallet-1.0-5
-echo "Build complete"
+
+echo "Building tar.gz"
+mkdir tmp
+cp ../mwc-qt-wallet/mwc-qt-wallet tmp
+cp ../mwc713/target/release/mwc713 tmp
+cd tmp
+tar zcvf ../mwc-qt-wallet-1.0-5.tgz *
+
+echo "Build Complete";
 
